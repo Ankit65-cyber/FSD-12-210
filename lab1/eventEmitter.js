@@ -16,10 +16,20 @@ const checkout = (name) => {
   console.log(`${name} logged out`);
 };
 
-login("ankit yadav");
+
 
 const task = new EventEmitter();
+task.once("greet",start);
 
 task.on("greet", login);
+task.on("greet",working);
+task.on("greet",checkout);
 
+task.once("exit", () =>{
+    console.log("system shutting down");
+});
 task.emit("greet", "ankit yadav");
+task.emit("greet", "akhil yadav");
+task.emit("greet","digvijay");
+task.emit("exit","Manager");
+
