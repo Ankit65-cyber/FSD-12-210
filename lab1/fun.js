@@ -1,0 +1,64 @@
+//waf to take any digit (o-9)and
+//return its in word
+//0-one
+//5-fivennnn
+const towords = (digit)=>{
+    const words = ["zero","one","two","three"]
+}
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Enter a digit (0-9): ", function(input) {
+
+    let digit = Number(input);
+
+    switch (digit) {
+        case 0:
+            console.log("Zero");
+            break;
+
+        case 1:
+            console.log("One");
+            break;
+
+        case 2:
+            console.log("Two");
+            break;
+
+        case 3:
+            console.log("Three");
+            break;
+
+        case 4:
+            console.log("Four");
+            break;
+
+        case 5:
+            console.log("Five");
+            break;
+
+        case 6:
+            console.log("Six");
+            break;
+
+        case 7:
+            console.log("Seven");
+            break;
+
+        case 8:
+            console.log("Eight");
+            break;
+
+        case 9:
+            console.log("Nine");
+            break;
+
+        default:
+            console.log("Invalid Input");
+    }
+
+    rl.close();
+});
